@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-<script src="https://s3.tradingview.com/tv.js"></script>
 
 const inter = Inter({ subsets: ["latin"] });
 
