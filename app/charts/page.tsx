@@ -62,32 +62,6 @@ const Page = (props: Props) => {
     getData();
   }, [selectedStock, selectedTimeframe]);
 
-  const handleAddStockToWatchlist = (stock) => {
-    // Add stock to selected watchlist
-    setWatchlists((prevWatchlists) => {
-      const updatedWatchlists = [...prevWatchlists];
-      updatedWatchlists[selectedWatchlist].push(stock);
-      return updatedWatchlists;
-    });
-  };
-
-  const handleRemoveStockFromWatchlist = (stock) => {
-    // Remove stock from selected watchlist
-    setWatchlists((prevWatchlists) => {
-      const updatedWatchlists = [...prevWatchlists];
-      updatedWatchlists[selectedWatchlist] = updatedWatchlists[selectedWatchlist].filter(
-        (s) => s !== stock
-      );
-      return updatedWatchlists;
-    });
-  };
-
-  // const handleSearch = async (query) => {
-  //   // Search for stocks using Alpha Vantage or other API
-  //   const results = await searchStocks(query);
-  //   setSearchResults(results);
-  // };
-
   return (
     <div className='flex relative w-screen h-screen overflow-x-hidden'>
 
