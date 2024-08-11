@@ -11,15 +11,15 @@ const TimeframeSelector: React.FC<TimeframeSelectorProps> = ({ onChange, selecte
     const timeframes = ['1min', '5min', '15min', '30min', '45min', '1h', '2h', '4h', '8h', '1day', '1week', '1month'];
 
     return (
-        <div className="timeframe-selector border-2 box-border border-gray-300 block">
+        <div className="timeframe-selector box-border border-gray-300 block px-10">
             {timeframes.map((timeframe) => (
-                <Button
+                <button
                     key={timeframe}
-                    className={`timeframe-button p-2 ml-1 ${timeframe === selectedTimeframe ? 'active' : ''}`}
+                    className={`timeframe-button my-1 py-1 text-sm px-2 rounded-sm  hover:bg-slate-100 ${timeframe === selectedTimeframe ? 'text-blue-500' : ''}`}
                     onClick={() => onChange(timeframe)}
                 >
                     {timeframe}
-                </Button>
+                </button>
             ))}
         </div>
     );

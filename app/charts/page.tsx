@@ -57,7 +57,7 @@ const Page = (props: Props) => {
 
       setStockData(sortedData ? sortedData : demoData);
       setIsLoading(false);
-      console.log(sortedData)
+      // console.log(sortedData)
     };
     getData();
   }, [selectedStock, selectedTimeframe]);
@@ -65,7 +65,7 @@ const Page = (props: Props) => {
   return (
     <div className='flex relative w-screen h-screen overflow-x-hidden'>
 
-      <div className="flex-1 w-full h-screen">
+      <div className="w-screen md:w-full h-screen">
         <TimeframeSelector
           selectedTimeframe={selectedTimeframe}
           onChange={setSelectedTimeframe}
@@ -76,11 +76,16 @@ const Page = (props: Props) => {
 
       </div>
       <InfoBox selectedStock={selectedStock} />
+
+
+      <div className='absolute right-1'>
+
       <StockSidebar
         stocks={stocks}
         selectedStock={selectedStock}
         onSelectStock={setSelectedStock}
       />
+      </div>
     </div>
   );
 };

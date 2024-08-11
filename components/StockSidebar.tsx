@@ -14,8 +14,8 @@ const StockSidebar: React.FC<SidebarProps> = ({ stocks, selectedStock, onSelectS
   const [open, setOpen] = useState(true);
 
   return (<>
-    <Sidebar open={open} setOpen={setOpen}>
-      <SidebarBody className="absolute right-0 z-10 h-screen w-64 h-screen bg-[#26bef2] text-white">
+    <Sidebar   open={open} setOpen={setOpen}>
+      <SidebarBody  className="absolute right-0 z-10 h-screen w-64 h-screen bg-[#26bef2] text-white">
 
         <div className="">
           <h2 className="text-2xl font-bold p-4">TradeZen</h2>
